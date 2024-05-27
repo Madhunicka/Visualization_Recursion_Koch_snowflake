@@ -1,0 +1,45 @@
+.snowflake-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .snowflake-canvas {
+    border: 1px solid #ccc;
+    background-color: rgb(206, 217, 243);
+  }
+  
+  .depth-slider {
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .depth-label {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Animation */
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .snowflake-canvas {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 3s ease forwards;
+  }
+  
+  /* Snowflake color */
+  .snowflake-canvas {
+    stroke: #4e89ae; /* Adjust color as needed */
+  }
+  
